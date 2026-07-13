@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="440" viewBox="0 0 1100 440">
+  <rect width="1100" height="440" fill="#07111c"/>
+  <style>text{font-family:Arial,sans-serif;fill:#eaf7ff}.title{font-size:24px;font-weight:700}.field{font-size:16px;fill:#a9c4d8}.box{fill:#0d1d2d;stroke:#27a8ff;stroke-width:2}.line{stroke:#50db9c;stroke-width:3}.key{fill:#58c9ff}</style>
+  <text x="40" y="45" class="title">SQL Reporting Demo — Entity Relationship Overview</text>
+  <rect class="box" x="55" y="95" rx="14" width="280" height="250"/>
+  <text x="80" y="130" class="title">clients</text><text x="80" y="170" class="field key">PK client_id</text><text x="80" y="205" class="field">client_name</text><text x="80" y="240" class="field">email</text><text x="80" y="275" class="field">industry</text><text x="80" y="310" class="field">status</text>
+  <rect class="box" x="410" y="95" rx="14" width="280" height="250"/>
+  <text x="435" y="130" class="title">projects</text><text x="435" y="170" class="field key">PK project_id</text><text x="435" y="205" class="field key">FK client_id</text><text x="435" y="240" class="field">project_name</text><text x="435" y="275" class="field">status / progress</text><text x="435" y="310" class="field">budget / due_date</text>
+  <rect class="box" x="765" y="95" rx="14" width="280" height="250"/>
+  <text x="790" y="130" class="title">support_tickets</text><text x="790" y="170" class="field key">PK ticket_id</text><text x="790" y="205" class="field key">FK client_id</text><text x="790" y="240" class="field key">FK project_id</text><text x="790" y="275" class="field">priority / status</text><text x="790" y="310" class="field">opened_at / resolved_at</text>
+  <line class="line" x1="335" y1="205" x2="410" y2="205"/><line class="line" x1="690" y1="230" x2="765" y2="230"/>
+  <text x="352" y="192" class="field">1 : many</text><text x="707" y="217" class="field">1 : many</text>
+</svg>

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="SQL and reporting dashboard portfolio demonstration by Lance Albert D. Aganon.">
+  <title>SQL Reporting Demo</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <div><p class="eyebrow">MYSQL / MARIADB PORTFOLIO DEMO</p><h1>Project & Support Reporting</h1><p>Interactive browser demonstration using fictional sample records.</p></div>
+      <a class="button" href="../database/queries.sql" download>Download SQL queries</a>
+    </header>
+    <section class="stats" id="stats"></section>
+    <section class="toolbar" aria-label="Record filters">
+      <label>Search <input id="search" type="search" placeholder="Client or project name"></label>
+      <label>Status <select id="status"><option value="all">All statuses</option><option>planning</option><option>in_progress</option><option>review</option><option>completed</option><option>on_hold</option></select></label>
+    </section>
+    <section class="table-card">
+      <div class="table-scroll"><table><thead><tr><th>Client</th><th>Project</th><th>Type</th><th>Status</th><th>Progress</th><th>Budget</th><th>Due</th></tr></thead><tbody id="rows"></tbody></table></div>
+      <p id="empty" hidden>No matching records.</p>
+    </section>
+    <section class="query-card">
+      <div><p class="eyebrow">EXAMPLE QUERY</p><h2>Relational project report</h2></div>
+      <pre><code>SELECT c.client_name, p.project_name,
+       p.status, p.progress_percent,
+       p.budget, p.due_date
+FROM projects AS p
+JOIN clients AS c
+  ON c.client_id = p.client_id
+ORDER BY p.due_date;</code></pre>
+    </section>
+  </main>
+  <script src="assets/app.js"></script>
+</body>
+</html>

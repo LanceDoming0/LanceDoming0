@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Responsive Discord multi-bot dashboard portfolio demonstration by Lance Albert D. Aganon.">
+  <title>Lance Core Dashboard Demo</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#" aria-label="Dashboard home"><span class="brand-mark">⚡</span><span>LANCE</span></a>
+      <p class="brand-caption">Multi-bot control demo</p>
+      <nav aria-label="Dashboard sections">
+        <button class="nav-link active" data-view="overview">⌂ <span>Overview</span></button>
+        <button class="nav-link" data-view="bots">▦ <span>Bot controls</span></button>
+        <button class="nav-link" data-view="security">◈ <span>Security</span></button>
+        <button class="nav-link" data-view="logs">≡ <span>Activity log</span></button>
+      </nav>
+      <div class="sidebar-note">
+        <strong>Public demo</strong>
+        <span>Mock data only. No Discord credentials are included.</span>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
+        <div>
+          <p class="eyebrow">PORTFOLIO DEMONSTRATION</p>
+          <h1>Lance Core Dashboard</h1>
+          <p>Responsive control center concept for a modular Discord bot ecosystem.</p>
+        </div>
+        <div class="system-pill"><span class="pulse"></span><span id="clock">Online</span></div>
+      </header>
+
+      <section class="view active" id="overview" aria-labelledby="overviewTitle">
+        <div class="section-heading">
+          <div><p class="eyebrow">SYSTEM OVERVIEW</p><h2 id="overviewTitle">Live status</h2></div>
+          <div class="global-actions">
+            <button class="button success" data-global="start">Start all</button>
+            <button class="button danger" data-global="stop">Stop all</button>
+            <button class="button warning" data-global="restart">Restart all</button>
+          </div>
+        </div>
+        <div class="stats-grid" id="statsGrid"></div>
+        <div class="panel-grid">
+          <article class="panel glass-card">
+            <div class="panel-title"><h3>Bot network</h3><span class="status-dot online"></span></div>
+            <div class="mini-list" id="miniBotList"></div>
+          </article>
+          <article class="panel glass-card">
+            <div class="panel-title"><h3>Recent activity</h3><button class="text-button" id="clearLog">Clear</button></div>
+            <ol class="activity-list" id="activityList"></ol>
+          </article>
+        </div>
+      </section>
+
+      <section class="view" id="bots" aria-labelledby="botsTitle">
+        <div class="section-heading"><div><p class="eyebrow">PROCESS MANAGEMENT</p><h2 id="botsTitle">Individual bot controls</h2></div></div>
+        <div class="bot-grid" id="botGrid"></div>
+      </section>
+
+      <section class="view" id="security" aria-labelledby="securityTitle">
+        <div class="section-heading"><div><p class="eyebrow">PROTECTION MODULES</p><h2 id="securityTitle">Security switches</h2></div></div>
+        <div class="security-grid" id="securityGrid"></div>
+      </section>
+
+      <section class="view" id="logs" aria-labelledby="logsTitle">
+        <div class="section-heading"><div><p class="eyebrow">AUDIT TRAIL</p><h2 id="logsTitle">Activity log</h2></div><button class="button secondary" id="exportLog">Export log</button></div>
+        <div class="log-console" id="logConsole" role="log" aria-live="polite"></div>
+      </section>
+    </main>
+  </div>
+  <script src="assets/app.js"></script>
+</body>
+</html>
