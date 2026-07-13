@@ -33,9 +33,7 @@ I am an Information Technology student from Bulacan, Philippines, with hands-on 
 ## Contact
 
 - Email: **lancealbert.aganon@gmail.com**
-- Portfolio: **ADD_YOUR_NETLIFY_URL_HERE**
+- Portfolio: **https://lancedomingo.netlify.app**
 - Facebook: **https://www.facebook.com/LanceD0mingo/**
 - Instagram: **https://www.instagram.com/lance.doming0/**
 - Discord: **lance3333**
-
-> Replace `ADD_YOUR_NETLIFY_URL_HERE` after deploying your portfolio.
